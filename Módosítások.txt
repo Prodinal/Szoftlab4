@@ -20,3 +20,6 @@ ROBOT
 
 COORD
 add(pos1, pos2) statikus
+
+
+////////////////// IDE ÍROK VALAMIT, HOGY A FASZOM GITTBEN MI FOG TÖTÉNNI////////////SPIDEY
