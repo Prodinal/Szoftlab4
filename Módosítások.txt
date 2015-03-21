@@ -1,0 +1,22 @@
+ENGINE
+
+új tagváltozók: 
+private Map map;
+private Robot activePlayer;
+private Robot winner;
+
+új metódusok:
+public Engine(){}
+private void roundOver(){}	//meghívja a következõ kettõt
+private void trapRobots(){}	//csapdába lépés szekvencia
+private void moveRobots(){}	//robotok mozgatása szekvencia
+
+getPlayers, setPlayers kikommentelve
+
+ROBOT
+
+új tagváltozó: private Engine engine;
++konstruktor public Robot(Engine x){}	//hogy tudjon az enginerõl
+
+COORD
+add(pos1, pos2) statikus
