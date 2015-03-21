@@ -5,6 +5,8 @@ private Map map;
 private Robot activePlayer;
 private Robot winner;
 
+///////////////////// MOST IDE ÍROK A KÖZEPÉBE, KOMMITOLNI AKAROK! ////////////////////SPIDEY
+
 új metódusok:
 public Engine(){}
 private void roundOver(){}	//meghívja a következõ kettõt
