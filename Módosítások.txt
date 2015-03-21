@@ -20,3 +20,5 @@ ROBOT
 
 COORD
 add(pos1, pos2) statikus
+
+#tuglif
