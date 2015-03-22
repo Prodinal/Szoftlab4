@@ -10,16 +10,8 @@ public class Robot {
 
 	private Engine engine;
 	
-	/**\brief Robot konstruktor
-	 * 
-	 * Inicializálja a tárolt adatokat és 
-	 * eltárolja a paraméterként kapott engine-t.
-	 * 
-	 * @param engine
-	 */
 	
-	
-	public Robot(Engine engine){
+	public Robot(Engine x){
 		
 		System.out.println("Robot()");
 		
@@ -32,16 +24,8 @@ public class Robot {
 		road=0;
 		alive=true;
 		
-		this.engine=engine;
+		engine=x;
 	}
-	
-	/** \brief Kiszámolja a robot új helyét és vektorait
-	 * 
-	 * Az impulzus és a modifier vektorok összege
-	 * lesz az új impulse vektor, az új hely pedig
-	 * a hely és az új impulse összege.
-	 * 
-	 */
 	
 	public void calculateCoords() {					//KÉSZ
 		
@@ -62,13 +46,11 @@ public class Robot {
 		return alive;
 	}
 
-	/**\brief Lerak egy olajat
+	/**
 	 * 
-	 * Ha van még renkelkezésre álló olaj,
-	 * akkor létrehoz egyet a jelenlegi
-	 * helyén és berakja az engine-be.
+	 * @param pos
 	 */
-	public void placeOil() {		//KÉSZ
+	public void placeOil(Coord pos) {		//KÉSZ
 		
 		System.out.println("Robot.placeOil(Coord pos)");
 		
@@ -83,13 +65,11 @@ public class Robot {
 		}
 	}
 
-	/**\brief Lerak egy ragacsot
+	/**
 	 * 
-	 * Ha van még renkelkezésre álló ragacs,
-	 * akkor létrehoz egyet a jelenlegi
-	 * helyén és berakja az engine-be.
+	 * @param pos
 	 */
-	public void placeSlime() {			//KÉSZ
+	public void placeSlime(Coord pos) {			//KÉSZ
 		
 		System.out.println("Robot.placeSlime(Coord pos)");
 		

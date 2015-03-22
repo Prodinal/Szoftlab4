@@ -11,15 +11,12 @@ public class Map {
 
 	private BufferedImage field;
 
-	/**\brief Betölti a kapott pályát
-	 * 
-	 * A kapott string alapján megnyitja
-	 * és eltárolja a képet.
+	/**
 	 * 
 	 * @param s
 	 */
 	public void load(String s) {						//KÉSZ sort of (nemtudom jó-e lol)
-		System.out.println("load");
+		System.out.println("-> [:Map].load(s)");
 	
 		try {
 			field=ImageIO.read(new File(s));
@@ -28,17 +25,12 @@ public class Map {
 		}
 	}
 
-	/**\brief Megnézi leesett-e a robot
+	/**
 	 * 
-	 * Megnézi a robot jelenlegi helyét,
-	 * és ha az a pályán a szakadék színe,
-	 * akkor visszatér true-val, jelezve,
-	 * hogy a robot a mélybe zuhant.
-	 *
 	 * @param c
 	 */
 	public Boolean fall(Coord c) {						//THIS IS SO BAD BUT I MIGHT WORK FOR TESTS
-		System.out.println("fall");
+		System.out.println("->[:Map].fall(c)");
 		
 		if(field.getRGB(c.getX(), c.getY()) == Color.BLACK.getRGB()){
 			return true;
@@ -51,13 +43,13 @@ public class Map {
 	 * @param numberOfPlayers
 	 */
 	public ArrayList<Coord> putPlayers(int numberOfPlayers) {			//TO BE FILLED LATER
-		System.out.println("putPlayers");
+		System.out.println("->[:Map].putPlayers(numberOfPlayers)");
 		
 		return new ArrayList<Coord>();
 	}
 
 	public BufferedImage getField() {					//KÉSZ
-		System.out.println("getField");
+		System.out.println("->[:Map].getField()");
 		
 		return field;
 	}
@@ -67,7 +59,7 @@ public class Map {
 	 * @param field
 	 */
 	public void setField(BufferedImage field) {			//KÉSZ
-		System.out.println("setField");
+		System.out.println("->[:Map].setField(field)");
 		
 		this.field=field;
 	}

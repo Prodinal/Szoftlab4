@@ -14,18 +14,9 @@ public class Engine {
 	
 	//UTÓLAGOS FÜGGVÉNYEK
 	
-	/**\brief Robotok mozgatása
-	 * 
-	 * Minden még élõ robotra meghívja a
-	 * calCulateCoords() függvényt, és 
-	 * ellenõrzi, hogy leesett-e valamelyik.
-	 * Ha igen, akkor azt átteszi a halott 
-	 * robotok közé.
-	 */
-	
 	private void moveRobots(){					//KÉSZ
 		
-		System.out.println("Engine.moveRobots()");
+		System.out.println("moveRobots");
 		
 		for(Robot tmp: alivePlayers){
 			tmp.calculateCoords();
@@ -37,20 +28,9 @@ public class Engine {
 		}
 	}
 	
-	/**\brief Robotok ellenõrzése a csapdákra
-	 * 
-	 * Egyesével elkéri a robotoktól
-	 * a helyüket, és ellenõrizteti az
-	 * összes csapdával, hogy belelépett-e.
-	 * Ha igen, akkor átadja a csapdának
-	 * a robotot, hogy az beállítsa a 
-	 * neki megfelelõ módosításokat.
-	 * 
-	 */
-	
 	private void trapRobots(){					//KÉSZ
 		
-		System.out.println("Engine.trapRobots()");
+		System.out.println("trapRobots");
 		
 		for(Robot robot: alivePlayers){
 			Coord pos=robot.getPosition();
@@ -62,15 +42,6 @@ public class Engine {
 			}
 		}
 	}
-	
-	/**\brief Kör vége
-	 * 
-	 * Amikor az utolsó játékos is elpasszolta
-	 * a körét, akkor hívódik meg. Meghívja a
-	 * az engine trapRobots() és moveRobots()
-	 * függvényeit ilyen sorrendben.
-	 * 
-	 */
 	
 	private void roundOver(){					//KÉSZ
 		
@@ -84,12 +55,6 @@ public class Engine {
 	
 	//PUBLIC, TERVEZETT FÜGGVÉNYEK
 	
-	/**\brief Engine konstruktor
-	 * 
-	 * Inicializálja az ArrayList-eket és
-	 * beállítja a max körök számát. 
-	 */
-	
 	public Engine(){							//KÉSZ
 		
 		System.out.println("Engine()");
@@ -101,17 +66,6 @@ public class Engine {
 		player_num=0;
 		round_num=30;
 	}
-	
-	/**\brief A fõ playfüggvény, itt fut a játék nagy része
-	 * 
-	 * Amíg a körszámláló el nem éri a nullát
-	 * egyesével végigmegy az élõ robotokon,
-	 * majd vár, amíg a kezelõfelület felébreszti
-	 * a kör átpasszolásával. Amikor végig ért a 
-	 * a robotokon meghívja a roundOver() függvényt.
-	 * Amikor elfogytak a körök meghívja a whoWins()
-	 * függvényt.
-	 */
 	
 	public void play() {						//PARTIALLY READY
 		
@@ -133,12 +87,7 @@ public class Engine {
 		whoWins();
 	}
 
-	/**\brief Játék inicializálása
-	 * 
-	 * Látrehozza és betölti a pályát kezelõ
-	 * objektumot, létrehoz a paraméterében
-	 * kapott számú robotot és lerakja õket a
-	 * pályára.
+	/**
 	 * 
 	 * @param numberOfPlayers
 	 */
@@ -161,14 +110,7 @@ public class Engine {
 		}
 	}
 
-	/**\brief Kör passzolása
-	 * 
-	 * A kezelõfelülettõl kapott vektort
-	 * átadja az épp aktív robotnak az
-	 * új modifiereként, és felébreszti az
-	 * Engine.play()-ben várakozó fõszálat,
-	 * hogy továbblépjen a játék a következõ
-	 * játékosra.
+	/**
 	 * 
 	 * @param modifier
 	 */
@@ -188,10 +130,7 @@ public class Engine {
 //		//activePlayer=alivePlayers.get((alivePlayers.indexOf(activePlayer)+1)%alivePlayers.size());
 	}
 
-	/**\brief Új csapda hozzáadása
-	 * 
-	 * Eltárolja a csapdák között a
-	 * paraméterben kapott csapdát.
+	/**
 	 * 
 	 * @param x
 	 */
@@ -202,11 +141,7 @@ public class Engine {
 		traps.add(x);
 	}
 
-	/**\brief Átrakja a robotot a halottak közé
-	 * 
-	 * A paraméterben kapott robotot kiveszi az
-	 * élõk közül és átteszi a halottak közé.
-	 * A robot alive flagját is átállítja.
+	/**
 	 * 
 	 * @param r
 	 */
@@ -219,14 +154,6 @@ public class Engine {
 		r.setAlive(false);
 	}
 
-	/**\brief Megnézi ki nyert
-	 * 
-	 * Végignézi a robotok road attribútumát
-	 * és kiválasztja a legnagyobbat.
-	 * Ezt eltárolja a winner attribútumban.
-	 *  
-	 */
-	
 	public void whoWins() {							//KÉSZ
 		
 		System.out.println("Engine.whoWins()");
