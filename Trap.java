@@ -9,15 +9,20 @@ public class Trap {
 	 * @param r
 	 */
 	public void spring(Robot r) {				//KÉSZ
-		System.out.println("->[:Trap].springTrap(r)");
+		System.out.println("springTrap");
 	}
 
-	/**
+	/**\brief Ütközik-e a robot a csapdával
+	 * 
+	 * Megnézi, hogy a kapott koordináta
+	 * beleesik-e a csapda körüli r sugarú
+	 * körbe és ennek megfelelõen
+	 * visszatér egy bool-lal.
 	 * 
 	 * @param c
 	 */
 	public Boolean collide(Coord c) {			//KÉSZ
-		System.out.println("->[:Startup].collide(c)");
+		System.out.println("collide");
 		
 		if((c.getX()-pos.getX())*(c.getX()-pos.getX())+(c.getY()-pos.getY())*(c.getY()-pos.getY())<=r*r){		//(x-x0)^2+(y-y0)^2<=R^2
 			return true;
@@ -27,7 +32,7 @@ public class Trap {
 	}
 
 	public Coord getPos() {						//KÉSZ
-		System.out.println("->[:Startup].getPos()");	
+		System.out.println("getPos");	
 		
 		return this.pos;
 	}
@@ -37,13 +42,13 @@ public class Trap {
 	 * @param pos
 	 */
 	public void setPos(Coord pos) {				//KÉSZ
-		System.out.println("->[:Startup].setPos(pos)");
+		System.out.println("setPos");
 		
 		this.pos = pos;
 	}
 
 	public int getR() {							//KÉSZ
-		System.out.println("->[:Startup].getR()");
+		System.out.println("getR");
 		
 		return this.r;
 	}
@@ -53,13 +58,13 @@ public class Trap {
 	 * @param r
 	 */
 	public void setR(int r) {					//KÉSZ
-		System.out.println("->[:Startup].setR(r)");
+		System.out.println("setR");
 		
 		this.r = r;
 	}
 
 	public Robot getOwner() {					//KÉSZ
-		System.out.println("->[:Startup].getOwner()");
+		System.out.println("getOwner");
 		
 		return this.owner;
 	}
@@ -69,7 +74,7 @@ public class Trap {
 	 * @param owner
 	 */
 	public void setOwner(Robot owner) {				//KÉSZ
-		System.out.println("->[:Startup].setOwner(owner)");
+		System.out.println("setOwner");
 		
 		this.owner = owner;
 	}
